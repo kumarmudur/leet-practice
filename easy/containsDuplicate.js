@@ -1,4 +1,4 @@
-// Array and Hash map
+// Array and Two Pointers
 
 // Input: nums = [1,2,3,1] : true
 // Input: nums = [1,2,3,4] : false
