@@ -13,7 +13,7 @@ const removeElement = function(nums, val) {
     for (let i = 0; i < len; i++) {
         if (nums[i] !== val) nums[count++] = nums[i];
     }
-    console.log('count', count);
+    return count;
 };
 
 // Solution 2
@@ -32,5 +32,4 @@ const removeElement2 = function(nums, val) {
     return nums.filter(num => num !== val);
 }
 
-
-console.log(removeElement([3,2,2,3], 3));
+removeElement([3,2,2,3], 3);
