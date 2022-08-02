@@ -7,6 +7,7 @@
  */
 
 // Solution 1 
+// time: O(n) | Space: O(1)
 const removeElement = function(nums, val) {
     let len = nums.length;
     let count = 0;
