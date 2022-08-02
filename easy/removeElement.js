@@ -1,4 +1,5 @@
-// Array, Two Pointers
+// removeElement 
+// Topic: Array, Two Pointers
 
 /**
  * @param {number[]} nums
