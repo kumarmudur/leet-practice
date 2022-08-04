@@ -8,7 +8,7 @@
  * @param {number[]} nums
  * @return {boolean}
  */
-
+// time: O(n) | space: O(n)
 const containsDuplicate = function(nums) {
     const hash = {};
     for (const num of nums) {
