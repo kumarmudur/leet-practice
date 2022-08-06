@@ -1,4 +1,4 @@
-// Palindrome number
+// Palindrome Number
 // Topic: Math 
 // Input: 121 => true
 // Input: -121 => false
