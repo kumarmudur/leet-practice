@@ -9,7 +9,7 @@
  * @return {number}
  */
 // time: O(log(n)) | space: O(n)
-const reverse = function(x) {
+const reverseInt = function(x) {
    let INT_MAX = 2147483647;
    let INT_MIN = - INT_MAX - 1;
    let res = 0;
@@ -22,4 +22,9 @@ const reverse = function(x) {
    return res;
 };
 
-console.log(reverse(-120));
+const reverseInt1 = function(n) {
+    const rev = n.toString().split('').reverse().join('');
+    return parseInt(rev) * Math.sign(n);
+}
+
+console.log(reverseInt(-120));
