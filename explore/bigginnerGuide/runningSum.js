@@ -10,11 +10,11 @@
 // Solution 1 
 // time: O(n) | space: O(n)
 const runningSum = function(nums) {
-    const result = [nums[0]];
+    const results = [nums[0]];
     for (let i = 1; i < nums.length; i++) {
-        result[i] = nums[i] + result[i - 1];
+        results[i] = nums[i] + results[i - 1];
     }
-    return result;
+    return results;
 };
 
 runningSum([3,1,2,10,1]);
