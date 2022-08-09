@@ -17,4 +17,14 @@ const runningSum = function(nums) {
     return results;
 };
 
+// solution 2
+// time: O(n) | space: O(1)
+const runningSum1 = function(nums) {
+    let length = nums.length;
+    for (i = 1; i < length; i++) {
+        nums[i] += nums[i - 1];
+    }
+    return nums;
+}
+
 runningSum([3,1,2,10,1]);
