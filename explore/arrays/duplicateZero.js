@@ -38,4 +38,26 @@ const duplicateZeros1 = function(arr) {
     return results;
 }
 
-console.log(duplicateZeros([1,0,2,3,0,4,5,0]));
+// Solution 3
+// time: O(n) | space 0(n)
+const duplicateZeros2 = function(arr) {
+    let i = 0;
+    const queue = [];
+    while (i < arr.length) {
+        if (arr[i] === 0) {
+            queue.push(0, 0);
+        } else {
+            if (queue.length) {
+                queue.push(arr[i]);
+            } else {
+                i++;
+                continue;
+            }
+        }
+        arr[i] = queue.shift();
+        i++;
+    }
+    return arr;
+};
+
+console.log(duplicateZeros2([1,0,2,3,0,4,5,0]));
