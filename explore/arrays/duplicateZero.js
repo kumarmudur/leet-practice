@@ -22,4 +22,20 @@ const duplicateZeros = function(arr) {
    return arr;
 };
 
+// Solution 2 
+// time: O(n) | space 0(n)
+const duplicateZeros1 = function(arr) {
+    const results = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (results.length !== arr.length) {
+            if (arr[i] === 0) {
+                results.push(0, 0);
+            } else {
+                results.push(arr[i]);
+            }
+        }
+    }
+    return results;
+}
+
 console.log(duplicateZeros([1,0,2,3,0,4,5,0]));
