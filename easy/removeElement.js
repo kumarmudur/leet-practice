@@ -19,6 +19,7 @@ const removeElement = function(nums, val) {
 };
 
 // Solution 2
+// time: O(n) | space O(1)
 const removeElement1 = function(nums, val) {
     const result = [];
     for (let num of nums) {
