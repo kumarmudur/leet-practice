@@ -18,7 +18,6 @@ const isHappy = function(n) {
         tmp = 0;
 
         while (n > 0) {
-            console.log('line 19', tmp);
             tmp += Math.pow(n % 10, 2);
             n = Math.floor(n / 10);
         }
