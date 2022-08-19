@@ -27,8 +27,6 @@ const mergeTwoLists = function(list1, list2) {
     let p2 = list2;
 
     while (p1 || p2) {
-        console.log('p1.val', p1.val);
-        console.log('p2.val', p2.val);
         if (p1 === null || (p2 !== null && p2.val < p1.val)) {
             now.next = p2;
             p2 = p2.next;
