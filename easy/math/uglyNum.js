@@ -36,4 +36,14 @@ const isUgly2 = function(n) {
     return true;
 }
 
-console.log(isUgly2(14));
+// Solution 3
+const isUgly3 = function(n) {
+    if (n === 1) return true;
+
+    if (n % 2 === 0) return isUgly3(n / 2);
+    else if (n % 3 === 0) return isUgly3(n / 3);
+    else if (n % 5 === 0) return isUgly3(n / 5);
+    else return false;
+}
+
+console.log(isUgly3(1));
