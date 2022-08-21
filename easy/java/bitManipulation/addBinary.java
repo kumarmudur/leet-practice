@@ -1,6 +1,5 @@
-package easy.java.bitManipulation;
-
 // Topic: Math, String, Bit Manipulation, Simulation
+package easy.java.bitManipulation;
 
 class Solution {
     public String addBinary(String a, String b) {
