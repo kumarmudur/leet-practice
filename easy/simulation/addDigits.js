@@ -15,6 +15,7 @@
  * @param {number} num
  * @return {number}
  */
+// Solution 1
 const addDigits = function(num) {
   let newStr = num.toString().split('');
   if (newStr.length === 1) return newStr[0];
@@ -33,5 +34,17 @@ const addDigits = function(num) {
    }
   return addDigitsValues(newStr);
 };
+
+// Solution 2
+const addDigits1 = function(num) {
+    num = num.toString();
+    let result = 0;
+    for (let i = 0; i < num.length; i++) {
+        result += Number(num[i]);
+    }
+    if (result.toString().length === 1) return result;
+    else addDigits(result);
+}
+
 
 console.log(addDigits(89));
