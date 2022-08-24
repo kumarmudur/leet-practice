@@ -8,7 +8,7 @@
  */
 // solution 1
 // time: O(n) | space: O(n)
-const majorityElement = function(nums) {
+const majorityElement = (nums) => {
     let majority = Math.trunc(nums?.length / 2);
     let map = {};
     for (let i = 0; i < nums.length; i++) {
@@ -22,4 +22,16 @@ const majorityElement = function(nums) {
     }
 };
 
-console.log(majorityElement([3,2,3]));
+const majorityElement1 = (nums) => {
+    for (let i of nums) {
+        if (count(nums, i) > (nums.length / 2)) return i;
+    }
+};
+
+const count = (arr, num) => {
+    let count = 0;
+    arr.forEach((value) => value === num && count++);
+    return count;
+}
+
+console.log(majorityElement1([2,2,1,1,1,2,2]));
