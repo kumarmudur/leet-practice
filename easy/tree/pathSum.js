@@ -1,3 +1,4 @@
+// Topic: Tree, DFS, BFS, Binary Tree
 /**
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {
@@ -12,7 +13,7 @@
  * @return {boolean}
  */
 
-// time: O(n) | space: O(n)
+// time: O(n) | space: O(1)
 const hasPathSum = (root, targetSum) => {
     if (!root) return false;
     if (root.val === targetSum && !root.left && !root.right) return true;
