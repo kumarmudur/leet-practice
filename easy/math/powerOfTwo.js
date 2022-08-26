@@ -11,4 +11,12 @@ const isPowerOfTwo = function(n) {
 
 };
 
+// Solution 2
+// time: O(log n) | space: O(log n)
+const isPowerOfTwo1 = function(n) {
+    if ( n > 1) return isPowerOfTwo1(n /2);   
+    if (n === 1) return true;
+    if (n < 1) return false;
+};
+
 console.log(isPowerOfTwo1(4));
