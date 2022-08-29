@@ -27,3 +27,15 @@ const fib1 = (n) => {
     }
     return calculateFib(n);
 }
+
+// Solution 3
+// Bottom-up Dynamic Programming
+// time: O(n) | space: O(n)
+const fib2 = (n) => {
+    if (n < 2) return n;
+    const dp = [0, 1];
+    for (let i = 2; i <=n; i++) {
+        dp[i] = dp[i - 1] + dp[i - 2];
+    }
+    return dp[n];
+}
