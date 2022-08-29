@@ -39,3 +39,18 @@ const fib2 = (n) => {
     }
     return dp[n];
 }
+
+// Solution 4
+// Memory optimization
+// time: O(n) | space: O(1)
+const fib3 = (n) => {
+    if (n < 2) return n;
+    let n1 = 0, n2 = 1, temp;
+
+    for (let i = 2; i <= n; i++) {
+        temp = n1 + n2;
+        n1 = n2;
+        n2 = temp;
+    }
+    return n2;
+}
