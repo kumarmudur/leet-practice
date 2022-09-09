@@ -48,9 +48,32 @@ class Solution1 {
         return isBalanced(root.left) && isBalanced(root.right);
     }
 
-    public int heigt(TreeNode root) {
+    public int height(TreeNode root) {
         if (root == null)
             return 0;
         return 1 + Math.max(height(root.left) + height(root.right));
+    }
+}
+
+// Solution 3
+// Bottom-up approach
+class Solution2 {
+    public boolean isBalanced(TreeNode root) {
+        if (root == null)
+            return true;
+        return height(root) != -1;
+    }
+
+    public int height(TreeNode root) {
+        if (root == null)
+            return 0;
+
+        int leftHeight = height(root.left);
+        int rightHeight = height(root.right);
+        int diff = Math.abs(leftHeight - rightHeight);
+
+        if (diff > 1 || leftHeight == -1 || rightHeight == -1)
+            return -1;
+        return Math.max(leftHeight, rightHeight);
     }
 }
