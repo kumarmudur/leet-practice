@@ -25,7 +25,7 @@ class Solution1 {
         for (int i : nums)
             sum += i;
 
-        int n = nums.length + 1;
-        return (n * (n - 1) / 2) - sum;
+        int n = nums.length;
+        return (n * (n + 1) / 2) - sum;
     }
 }
