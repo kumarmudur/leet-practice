@@ -1,3 +1,5 @@
+import java.util.HashMap;
+
 //Topic: Array, Hash Table, Two Pointers 
 class Solution {
     public boolean containsNearbyDuplicate(int[] nums, int k) {
