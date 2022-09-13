@@ -2,6 +2,7 @@ package easy.arrays.java;
 
 import java.util.HashSet;
 
+//time: O(n) | space O(n)
 class Solution {
     public int missingNumber(int[] nums) {
         HashSet<Integer> set = new HashSet<Integer>();
@@ -14,5 +15,17 @@ class Solution {
             }
         }
         return -1;
+    }
+}
+
+// time: O(n) | space O(1)
+class Solution1 {
+    public int missingNumber(int[] nums) {
+        int sum = 0;
+        for (int i : nums)
+            sum += i;
+
+        int n = nums.length + 1;
+        return (n * (n - 1) / 2) - sum;
     }
 }
